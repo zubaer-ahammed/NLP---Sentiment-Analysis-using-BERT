@@ -1,7 +1,9 @@
+'''sentiment_analysis module'''
 import requests
 import json
 
 def sentiment_analyzer(text_to_analyse):
+    '''sentiment_analyzer function'''
     # Define the URL for the sentiment analysis API
     url = 'https://sn-watson-sentiment-bert.labs.skills.network/v1/watson.runtime.nlp.v1/NlpService/SentimentPredict'
 
@@ -28,3 +30,4 @@ def sentiment_analyzer(text_to_analyse):
 
     # Return the label and score in a dictionary
     return {'label': label, 'score': score}
+    
